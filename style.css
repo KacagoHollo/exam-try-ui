@@ -207,9 +207,16 @@ section button i {
 
 i.arrow {
   font-size: 36px;
+  background-color: #ffeedf;
+  color: #145434;
 }
 
 .cards button:hover {
+  background-color: #145434;
+  color: #ffeedf;
+  border: 2px solid #ffeedf;
+}
+.cards button:hover i.arrow {
   background-color: #145434;
   color: #ffeedf;
 }
