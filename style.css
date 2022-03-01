@@ -54,7 +54,7 @@ s-color: #145434 */
 /* font: Space Grotesk
 icon: Material Icons */
 
-body {
+* {
   background-color: #ffeedf;
   color: #145434;
   font-family: "Space Grotesk", sans-serif;
@@ -63,9 +63,17 @@ body {
 }
 
 header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+
   width: 100%;
   height: 60px;
+
   border-bottom: 1px solid #145434;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 header .hamb {
@@ -74,44 +82,53 @@ header .hamb {
   position: absolute;
   right: 0;
   top: 5px;
+
+  width: 50px;
+  z-index: 10;
 }
 
 header h1 {
   padding: 10px;
   font-size: 36px;
+  z-index: 10;
+  font-weight: 700;
+}
+
+i.menu {
+  font-size: 36px;
 }
 
 main {
-  /* display: flex;
-  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center; */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  justify-content: center;
 
-  margin: 40px auto 0;
+  margin: 140px auto 0;
   max-width: 1200px;
   gap: 60px;
-}
-
-section:nth-of-type(odd) {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  z-index: 1;
 }
 
 section {
+  z-index: 1;
 }
 
 .cards {
   color: #ffeedf;
   background-color: #145434;
 
-  width: 450px;
-  height: 280px;
+  position: relative;
+
+  width: 400px;
+  /* height: 280px; */
 
   display: flex;
   flex-direction: column;
+  z-index: 1;
+
+  /* margin: 40px; */
+  padding: 40px;
 }
 
 .number {
@@ -127,32 +144,72 @@ section {
   align-items: center;
 
   font-size: 24px;
+
+  position: absolute;
+  top: -20px;
+  left: -20px;
 }
 
 .title {
+  /* padding: 40px; */
+  color: #ffeedf;
+  background-color: #145434;
+
   font-size: 36px;
-  padding: 40px;
 
   border-bottom: 1px solid #ffeedf;
+  min-height: 100px;
 }
 
 .sub {
+  color: #ffeedf;
+  background-color: #145434;
   font-size: 18px;
-  padding: 40px;
+  margin-top: 10px;
 }
 
 .text {
+  color: #ffeedf;
+  background-color: #145434;
+
   font-weight: 800;
   font-size: 18px;
-  padding-left: 40px;
+  padding-bottom: 20px;
 }
 
 button {
   border: 3px solid #145434;
   background-color: #ffeedf;
+  color: #145434;
+
   width: 200px;
   height: 50px;
 
   font-size: 14px;
   margin: auto;
+
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section button {
+  right: -10px;
+  bottom: -10px;
+}
+
+section button i {
+  position: absolute;
+  right: 0;
+}
+
+i.arrow {
+  font-size: 36px;
+}
+
+.cards button:hover {
+  background-color: #145434;
+  color: #ffeedf;
 }
