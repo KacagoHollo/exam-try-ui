@@ -110,17 +110,14 @@ main {
   z-index: 1;
 }
 
-section {
-  z-index: 1;
-}
-
 .cards {
   color: #ffeedf;
   background-color: #145434;
 
   position: relative;
 
-  width: 400px;
+  width: 405px;
+  /* max-width: 405px; */
   /* height: 280px; */
 
   display: flex;
